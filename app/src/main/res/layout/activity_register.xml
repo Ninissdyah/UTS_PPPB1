@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".loginActivity"
+    tools:context=".registerActivity"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/login_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="70dp"
-        android:text="Login"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="Register"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="40sp"
@@ -21,7 +21,7 @@
         />
 
     <TextView
-        android:id="@+id/emailTitle"
+        android:id="@+id/emailTitleR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -33,7 +33,7 @@
         />
 
     <EditText
-        android:id="@+id/emailInput"
+        android:id="@+id/emailInputR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -46,7 +46,7 @@
         />
 
     <TextView
-        android:id="@+id/PassTitle"
+        android:id="@+id/PassTitleR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -58,7 +58,7 @@
         />
 
     <EditText
-        android:id="@+id/PassInput"
+        android:id="@+id/PassInputR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -71,28 +71,54 @@
         />
 
     <TextView
-        android:id="@+id/confirmAccountLogin"
+        android:id="@+id/ConfirmPassTitleR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Confirm Your Password"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/ConfirmPassR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border"
+        android:hint="*******************"
+        android:inputType="textPassword"
+        android:padding="13dp"
+        />
+
+    <TextView
+        android:id="@+id/confirmAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="25dp"
-        android:text="Do you have account yet? Register"
+        android:text="Do you have account? Login"
         android:textColor="@color/black"
         android:textSize="18sp"
         />
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
         android:padding="15dp"
-        android:text="Login"
+        android:text="Register"
         android:textSize="15sp"
         />
+
 
 </LinearLayout>

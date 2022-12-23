@@ -35,14 +35,35 @@ public class detailDataUser extends AppCompatActivity implements AdapterView.OnI
         //function untuk menampilkan spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.label_array, android.R.layout.simple_spinner_item); //label yg akan ditampilkan
         spinner.setAdapter(adapter);
+//        spinner.setOnItemSelectedListener(this);
+
+
 
         //memanggil fungsi untuk menampilkan datepicker
-        tanggalLahir.setOnClickListener(new View.OnClickListener() {
+        tanggalLahir.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
-            public void onClick(View view) {
-                showDatePicker();
+            public void onFocusChange(View view, boolean b) {
+                if(b){
+                    tanggalLahir.setEnabled(false);
+                    DialogFragment dateFragment = new DatePickerFragment();
+                    dateFragment.show(getSupportFragmentManager(), "date-picker");
+                }else{
+                    tanggalLahir.setEnabled(true);
+                }
             }
         });
+//            @Override
+//            public void onClick(View view, boolean bol) {
+//                if(bol){
+//                    tanggalLahir.setEnabled(false);
+//                    DialogFragment dateFragment = new DatePickerFragment();
+//                    dateFragment.show(getSupportFragmentManager(), "date-picker");
+//                }else{
+//                    tanggalLahir.setEnabled(true);
+//                }
+//                //showDatePicker();
+//            }
+//        });
 
         btnNewsShow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,25 +71,25 @@ public class detailDataUser extends AppCompatActivity implements AdapterView.OnI
                 String tanggal_lahir = String.valueOf(tanggalLahir.getText());
                 String kategori = String.valueOf(spinner.getSelectedItem());
                 Intent intent = new Intent(detailDataUser.this, MainActivity.class);
-                intent.putExtra("TanggalLahir", tanggal_lahir);
-                intent.putExtra("kategori", kategori);
+                intent.putExtra("tanggalLahir", tanggal_lahir);
+                intent.putExtra("kategoriTeks", kategori);
                 startActivity(intent);
             }
         });
     }
 
     //function menampilkan datepicker
-    public void showDatePicker() {
-        DialogFragment dateFragment = new DatePickerFragment();
-        dateFragment.show(getSupportFragmentManager(), "date-picker");
-    }
+//    public void showDatePicker() {
+//        DialogFragment dateFragment = new DatePickerFragment();
+//        dateFragment.show(getSupportFragmentManager(), "date-picker");
+//    }
 
     public void processDatePickerResult(int day, int month, int year){
         String day_string = Integer.toString(day);
         String month_string = Integer.toString(month+1);
         String year_string = Integer.toString(year);
 
-        String dateMessage = day_string + " - " + month_string + " " + year_string;
+        String dateMessage = day_string + " - " + month_string + " - " + year_string;
         tanggalLahir.setText(dateMessage);
     }
 

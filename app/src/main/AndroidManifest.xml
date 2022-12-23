@@ -10,10 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UTS_PPPB1">
         <activity
-            android:name=".NewsDetail"
+            android:name=".updateNews"
+            android:exported="false" />
+        <activity
+            android:name=".addNews"
             android:exported="false" />
         <activity
             android:name=".loginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NewsDetail"
+            android:exported="false" />
+        <activity
+            android:name=".registerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,11 +33,11 @@
         <activity
             android:name=".detailDataUser"
             android:exported="false"
-            android:parentActivityName=".loginActivity" />
+            android:parentActivityName=".registerActivity" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:parentActivityName=".detailDataUser"></activity>
+            android:exported="false"
+            android:parentActivityName=".detailDataUser" />
     </application>
 
 </manifest>

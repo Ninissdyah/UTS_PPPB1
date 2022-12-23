@@ -13,6 +13,10 @@ public class News {
         this.kategori = kategori;
     }
 
+    public News() {
+
+    }
+
     public String getJudul() {
         return judulBerita;
     }

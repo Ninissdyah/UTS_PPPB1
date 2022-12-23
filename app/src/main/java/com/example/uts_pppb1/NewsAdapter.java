@@ -10,12 +10,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     private final ArrayList<News> values; //menampung data rv
     private final LayoutInflater inflater; //ngeet view nya
 
+    DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+
+    //constructor adapter
     public NewsAdapter(Context context, ArrayList<News> values) {
         this.values = values;
         this.inflater = LayoutInflater.from(context);

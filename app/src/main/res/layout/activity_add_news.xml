@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".loginActivity"
+    tools:context=".addNews"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/login_title"
+        android:id="@+id/adddnews_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="70dp"
-        android:text="Login"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp"
+        android:text="Add News"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="40sp"
@@ -21,77 +21,121 @@
         />
 
     <TextView
-        android:id="@+id/emailTitle"
+        android:id="@+id/NewsTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
-        android:text="Email"
+        android:layout_marginTop="5dp"
+        android:text="News Title"
         android:textColor="@color/black"
         android:textSize="20sp"
         />
 
+
     <EditText
-        android:id="@+id/emailInput"
+        android:id="@+id/newsTitleInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/border"
-        android:hint="your email account"
-        android:inputType="textEmailAddress"
+        android:hint="your news title"
+        android:inputType="text"
         android:padding="13dp"
         />
 
     <TextView
-        android:id="@+id/PassTitle"
+        android:id="@+id/newsContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
-        android:text="Password"
+        android:layout_marginTop="17dp"
+        android:text="News Content"
         android:textColor="@color/black"
         android:textSize="20sp"
         />
 
+
     <EditText
-        android:id="@+id/PassInput"
+        android:id="@+id/newsContentInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/border"
-        android:hint="*******************"
-        android:inputType="textPassword"
+        android:hint="your news content"
+        android:inputType="text"
         android:padding="13dp"
         />
 
+
     <TextView
-        android:id="@+id/confirmAccountLogin"
+        android:id="@+id/minUsiaTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="25dp"
-        android:text="Do you have account yet? Register"
+        android:layout_marginTop="17dp"
+        android:text="Age Minimun"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/minUsiaInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border"
+        android:hint="age minimum can access"
+        android:inputType="text"
+        android:padding="13dp"
+        />
+
+    <TextView
+        android:id="@+id/categoryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="17dp"
+        android:text="News Category"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/newsCategoryInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border"
+        android:hint="your news category"
+        android:inputType="text"
+        android:padding="13dp"
         />
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_addnews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
         android:padding="15dp"
-        android:text="Login"
+        android:text="add news"
         android:textSize="15sp"
         />
 
